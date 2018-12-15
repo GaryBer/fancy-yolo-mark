@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+kivy = "==1.10.1"
+pillow = "==5.3.0"
+opencv-python = "==3.4.3.18"
+docutils = "==0.14"
+"kivy-deps-sdl2" = "==0.1.18"
+kivy-deps-glew = "==0.1.10"
+
+[dev-packages]
+pylint = "*"
+
+[requires]
+python_version = "3.7"

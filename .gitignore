@@ -1,0 +1,16 @@
+# IDE
+.vscode
+.idea
+.vs
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# Input
+input
+!input/.gitkeep
+
+# Output
+output
+!output/.gitkeep
