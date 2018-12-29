@@ -10,7 +10,7 @@ class VideoFrameSlider(Slider):
   def pause(self):
     self.released = False
     root = App.get_running_app().root
-    if root.my_camera.paused:
+    if root.ids.my_camera.paused:
       self.was_paused = True
     root.ids.video_control.pause()
 
@@ -19,15 +19,16 @@ class VideoFrameSlider(Slider):
 
   def set_frame_pos(self):
     root = App.get_running_app().root
-    if root.my_camera.paused:
-      root.my_camera.set_frame_pos(self.value)
+    if 'my_camera' in root.ids:
+      if root.ids.my_camera.paused:
+        root.ids.my_camera.set_frame_pos(self.value)
 
   def update_frame_pos(self):
     if self.released:
       return
     root = App.get_running_app().root
-    if root.my_camera.paused:
-      root.my_camera.update_frame_pos(self.value)
+    if root.ids.my_camera.paused:
+      root.ids.my_camera.update_frame_pos(self.value)
       if self.was_paused:
         self.was_paused = False
         self.released = True

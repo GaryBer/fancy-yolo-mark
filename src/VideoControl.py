@@ -7,16 +7,16 @@ class VideoControl(GridLayout):
 
   def play(self):
     root = App.get_running_app().root
-    root.my_camera.play()
+    root.ids.my_camera.play()
 
   def pause(self):
     root = App.get_running_app().root
-    root.my_camera.pause()
+    root.ids.my_camera.pause()
 
   def step_forward(self):
     root = App.get_running_app().root
-    root.my_camera.step_forward()
+    root.ids.my_camera.step_forward()
 
   def step_backward(self):
     root = App.get_running_app().root
-    root.my_camera.step_backward()
+    root.ids.my_camera.step_backward()
