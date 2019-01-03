@@ -1,0 +1,17 @@
+#:kivy 1.0
+
+<AboutDialog>:
+    title: 'About'
+    size_hint: None, None
+    size: 400, 120
+    auto_dismiss: False
+    BoxLayout:
+        orientation: 'vertical'
+        pos: self.pos
+        size: root.size
+        Label:
+            text: 'A fancy yolo mark.'
+        Button:
+            text: 'Close'
+            on_release: root.dismiss()
+            

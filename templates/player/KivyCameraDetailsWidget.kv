@@ -1,0 +1,43 @@
+#:kivy 1.0
+
+<KivyCameraDetailsWidget>:
+    cols: 5
+    rows: 1
+    size_hint_y: None
+    height: 40
+    BoxLayout:
+        Label:
+            text: 'Width: '
+        Label:
+            id: width
+            text: '0'
+    BoxLayout:
+        Label:
+            text: 'Height: '
+        Label:
+            id: height
+            text: '0'
+    BoxLayout:
+        Label:
+            text: 'FPS: '
+        Label:
+            id: fps
+            text: '0'
+    CheckBox:
+        size_hint_x: None
+        width: 35
+        
+    SaveFrameLabelsButton:
+        size_hint_x: None
+        width: 35
+        size_hint_y: None
+        height: 35
+        StackLayout:
+            pos: self.parent.pos
+            size: self.parent.size
+            padding: [2, 0]
+            orientation: 'lr-tb'
+            Image:
+                width: 32
+                source: './assets/icons/stamp.png'
+                size_hint_x: None

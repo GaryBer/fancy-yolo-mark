@@ -1,0 +1,49 @@
+#:kivy 1.0
+#:import Factory kivy.factory.Factory
+#:include ./templates/dialogs/AboutDialog.kv
+
+<MainMenu>:
+    pos_hint: {'top':1}
+
+    ActionView:
+        use_separator: True
+        ActionPrevious:
+            title: 'FancyYoloMark'
+            app_icon: './assets/icons/app.png'
+            with_previous: False
+            on_press: 
+                app.root.ids.screen_manager.transition.direction = 'right'
+                app.root.ids.screen_manager.current = 'main_screen'
+        ActionGroup:
+            text: 'File' 
+            mode: 'spinner'
+            ActionButton:
+                text: 'Settings'
+                on_press: 
+                    app.root.ids.screen_manager.transition.direction = 'left'
+                    app.root.ids.screen_manager.current = 'settings_screen'
+            ActionButton:
+                text: 'Exit'
+                on_press: app.stop() 
+        ActionButton:
+            text: 'Main'
+            on_press: 
+                app.root.ids.screen_manager.transition.direction = 'right'
+                app.root.ids.screen_manager.current = 'main_screen'
+        ActionButton:
+            text: 'Projects'
+            on_press: 
+                app.root.ids.screen_manager.transition.direction = 'left'
+                app.root.ids.screen_manager.current = 'project_manager_screen'
+        ActionButton:
+            text: 'Labels'
+            on_press: 
+                app.root.ids.screen_manager.transition.direction = 'left'
+                app.root.ids.screen_manager.current = 'label_manager_screen'
+        ActionGroup:
+            text: 'Help' 
+            mode: 'spinner'
+            ActionButton:
+                text: 'About'
+                on_release: Factory.AboutDialog().open()
+            

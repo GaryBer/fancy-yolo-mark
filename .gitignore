@@ -7,10 +7,6 @@
 __pycache__/
 *.py[cod]
 
-# Input
-input
-!input/.gitkeep
-
-# Output
-output
-!output/.gitkeep
+# Projects
+projects
+!projects/.gitkeep

@@ -1,0 +1,87 @@
+#:kivy 1.0
+
+<VideoControlWidget>:
+    cols: 5
+    rows: 1
+    size_hint_y: None
+    height: 40
+    Button:
+        size_hint_y: None
+        height: 35
+        StackLayout:
+            pos: self.parent.pos
+            size: self.parent.size
+            padding: [5, 0]
+            orientation: 'lr-tb'
+            Image:
+                width: 32
+                source: './assets/icons/video/first.png'
+                size_hint_x: None
+            Label:
+                size_hint_x: None
+                width: 50
+                text: "First"
+    Button:
+        size_hint_y: None
+        height: 35
+        StackLayout:
+            pos: self.parent.pos
+            size: self.parent.size
+            padding: [5, 0]
+            orientation: 'lr-tb'
+            Image:
+                width: 32
+                source: './assets/icons/video/play.png'
+                size_hint_x: None
+            Label:
+                size_hint_x: None
+                width: 50
+                text: "Play"
+    Button:
+        size_hint_y: None
+        height: 35
+        StackLayout:
+            pos: self.parent.pos
+            size: self.parent.size
+            padding: [5, 0]
+            orientation: 'lr-tb'
+            Image:
+                width: 32
+                source: './assets/icons/video/pause.png'
+                size_hint_x: None
+            Label:
+                size_hint_x: None
+                width: 50
+                text: "Pause"
+    Button:
+        size_hint_y: None
+        height: 35
+        StackLayout:
+            pos: self.parent.pos
+            size: self.parent.size
+            padding: [5, 0]
+            orientation: 'lr-tb'
+            Image:
+                width: 32
+                source: './assets/icons/video/stop.png'
+                size_hint_x: None
+            Label:
+                size_hint_x: None
+                width: 50
+                text: "Stop"
+    Button:
+        size_hint_y: None
+        height: 35
+        StackLayout:
+            pos: self.parent.pos
+            size: self.parent.size
+            padding: [5, 0]
+            orientation: 'lr-tb'
+            Image:
+                width: 32
+                source: './assets/icons/video/last.png'
+                size_hint_x: None
+            Label:
+                size_hint_x: None
+                width: 50
+                text: "Last"

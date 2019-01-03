@@ -1,0 +1,17 @@
+#:kivy 1.0
+
+<ErrorDialog>:
+    title: 'Error'
+    size_hint: None, None
+    size: 400, 120
+    auto_dismiss: False
+    BoxLayout:
+        orientation: 'vertical'
+        pos: self.pos
+        size: root.size
+        Label:
+            text: 'An error has occurred.'
+        Button:
+            text: 'Close'
+            on_release: root.dismiss()
+            

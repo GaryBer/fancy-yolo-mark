@@ -1,0 +1,88 @@
+#:kivy 1.0
+#:include ./templates/player/KivyCameraDetailsWidget.kv
+#:include ./templates/player/VideoControlWidget.kv
+#:include ./templates/player/VideoDetailsWidget.kv
+#:include ./templates/player/VideoFrameSlider.kv
+
+<MainScreen>:
+    GridLayout:
+        padding: [10, 10]
+        cols: 2
+        rows: 2
+
+        GridLayout:
+            id: player_column
+            cols: 1
+            rows: 2
+            
+            GridLayout:
+                id: controls
+                cols: 1
+                rows: 3
+                size_hint_y: None
+                height: 120
+
+                VideoControlWidget:
+                    id: video_control
+
+                VideoFrameSlider:
+                    id: video_frame_slider
+
+                VideoDetailsWidget:
+                    id: video_details
+                
+            GridLayout:
+                cols: 1
+                rows: 2
+
+                BoxLayout:
+                    orientation: "vertical"
+                    canvas.before:
+                        Color:
+                            rgba: 1, 1, 1, 1
+                        Rectangle:
+                            pos: self.pos
+                            size: self.size
+
+                    KivyCameraWidget:
+                        id: kivy_camera
+                        source: './assets/checker.png'
+
+                KivyCameraDetailsWidget:
+                    id: kivy_camera_details
+
+        GridLayout:
+            id: label_column
+            cols: 1
+            rows: 1
+            size_hint_x: None
+            width: 200
+
+            Button:
+                text: "Frames"
+                size_hint_y: None
+                height: 35
+
+        StackLayout:
+            id: label_column
+            orientation: "lr-tb"
+            size_hint_y: None
+            height: 80
+
+            Button:
+                size_hint_x: None
+                size_hint_y: None
+                height: 35
+                StackLayout:
+                    pos: self.parent.pos
+                    size: self.parent.size
+                    padding: [5, 0]
+                    orientation: 'lr-tb'
+                    Image:
+                        width: 32
+                        source: './assets/icons/tag.png'
+                        size_hint_x: None
+                    Label:
+                        size_hint_x: None
+                        width: 50
+                        text: "Labels"
