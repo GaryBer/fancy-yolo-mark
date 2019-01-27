@@ -6,9 +6,26 @@ Python 3.7
 
 ```
 pipenv install
-pipenv shell
-python main.py
 ```
+
+## Projects
+
+Projects directory structure:
+
+`projects/project-name/input/`
+
+`projects/project-name/labels/`
+
+`projects/project-name/output/`
+
+## Usage
+
+```
+pipenv shell
+python main.py --project='project-name'
+```
+
+---
 
 Please submit any issues or suggestions for improvements.
 
